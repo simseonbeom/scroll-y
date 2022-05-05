@@ -1,6 +1,8 @@
 let container;
 let stage;
 
+import Animation from './Animation.js';
+
 window.addEventListener('DOMContentLoaded', function () {
 
 
@@ -76,60 +78,9 @@ window.addEventListener('DOMContentLoaded', function () {
     (function () {
 
 
-        let v = 0;
 
-        gsap.to(".scroll-content", {
-            scrollTrigger: {
-                trigger: ".scroll-content",
-                start: "top top",
-                end: 'bottom bottom',
-                scrub: true,
-                onUpdate: self => {
-                    // console.log("progress:", self.progress)
-                    // v = Math.floor(self.progress * 5);
-                    // console.log(v)
-
-                }
-            }
-        });
-
-/*
-
-
-        gsap.to('.fix_section', {
-            rotation: 360,
-            // x: -innerWidth*3,
-            scrollTrigger: {
-                trigger: "#section02",
-                start: "top top",
-                // end: () => "+=" + 300,
-                end: 'bottom bottom',
-                pin: true,
-                // pinSpace:false,
-                pinSpacing: false,
-                scrub: true,
-                markers: true
-            }
-        });
-
-
-        let sc02 = gsap.timeline();
-        ScrollTrigger.create({
-            animation: sc02,
-            trigger: "#section02",
-            start: "top top",
-            end: "bottom bottom",
-            pin:true,
-            pinSpacing: false,
-            scrub: 1,
-        });
-
-        sc02.to(".box",{x:100},0);
-        sc02.to(".box2",{y:100},1);
-
-
-*/
-
+        Animation();
+      
 
     })();
 
